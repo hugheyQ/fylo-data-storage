@@ -7,13 +7,45 @@ html{
     box-sizing: inherit;
 }
 
+.mobile{
+    display: block;
+    z-index: -1;
+    pointer-events: none;
+    @media (min-width: 768px){
+    	display: none;
+    }
+}
+
+.desktop{
+    display: none;
+    @media (min-width: 768px){
+    	display: block;
+        z-index: -1;
+        pointer-events: none;
+    }
+}
+
 body{
     padding: 0;
     margin: 0;
     font-size: 14px;
     font-family: 'Raleway', sans-serif;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-color: $very-dark-blue;
+    height: 100%;
+    // position: relative;
 
 
+
+
+    .bg{
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
 
     .attribution { 
         font-size: 11px; 
